@@ -4,7 +4,6 @@ from PIL import Image
 import PyPDF2
 from typing import Union
 import google.generativeai as genai
-import openai
 import os
 from dotenv import load_dotenv
 
@@ -12,7 +11,6 @@ load_dotenv()
 
 # Initialize APIs (you'll need to set these environment variables)
 genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
-openai.api_key = os.getenv('OPENAI_API_KEY')
 
 def extract_text_from_image(image_data: bytes) -> str:
     """Extract text from image using Gemini 1.5 Flash"""
