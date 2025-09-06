@@ -54,7 +54,6 @@ async def extract_claim_data(file: UploadFile = File(...)):
         # Add document_id to response
         response_data = structured_data.copy()
         response_data["document_id"] = document_id
-        print(document_id)
         return response_data
         
     except Exception as e:

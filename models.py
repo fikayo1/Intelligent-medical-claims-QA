@@ -32,3 +32,4 @@ class ExtractionResponse(BaseModel):
     procedures: List[str]
     admission: AdmissionInfo
     total_amount: Optional[str] = None
+    document_id: str
