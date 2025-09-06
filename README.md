@@ -27,9 +27,8 @@ This project provides an API service for extracting structured data from medical
 - **Gemini 1.5 Flash is used for all AI tasks** (text extraction from images, structured data extraction, and question answering) for cost efficiency and simplicity.
 - **PDF text extraction uses PyPDF2** for reliability and speed.
 - **In-memory storage** is used for simplicity; this is not persistent and is suitable only for local/demo use.
-- **Environment variables** are used for API keys (`GEMINI_API_KEY` and `OPENAI_API_KEY`), loaded via `python-dotenv`.
+- **Environment variables** are used for API key (`GEMINI_API_KEY`), loaded via `python-dotenv`.
 - **Error handling** is implemented for file type validation, JSON parsing, and AI service failures.
-- **No authentication** is implemented; this is intended for local or internal use.
 
 ---
 
@@ -38,7 +37,7 @@ This project provides an API service for extracting structured data from medical
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/fikayo1/Intelligent-medical-claims-QA
 cd curacel
 ```
 
@@ -68,7 +67,6 @@ Create a `.env` file in the project root:
 
 ```
 GEMINI_API_KEY=your_gemini_api_key_here
-OPENAI_API_KEY=your_openai_api_key_here  # Only needed if you use OpenAI elsewhere
 ```
 
 ### 4. Run the Service
